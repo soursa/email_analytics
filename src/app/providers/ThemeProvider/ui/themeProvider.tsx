@@ -1,9 +1,9 @@
 import React, {FC, PropsWithChildren, useMemo, useState} from 'react';
-import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext, ThemeContextProps} from "./themeContext";
+import {LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext, ThemeContextProps} from "../lib/themeContext";
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT;
 
-const ThemeProvider: FC<PropsWithChildren> = ({children}) => {
+export const ThemeProvider: FC<PropsWithChildren> = ({children}) => {
 	const [theme, setTheme] = useState(defaultTheme);
 
 	const defaultValue: ThemeContextProps = useMemo(() => ({
@@ -17,5 +17,3 @@ const ThemeProvider: FC<PropsWithChildren> = ({children}) => {
 		</ThemeContext.Provider>
 	);
 };
-
-export default ThemeProvider;
