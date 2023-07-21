@@ -1,21 +1,24 @@
-import {FC, PropsWithChildren} from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import {Button} from "shared/ui/Button/Button";
-import {useTranslation} from "react-i18next";
+import {type FC, type PropsWithChildren} from 'react';
+import {classNames} from 'shared/lib/classNames/classNames';
+import {Button} from 'shared/ui/Button/Button';
+import {useTranslation} from 'react-i18next';
 
-interface LangSwitcherProps {
+type LangSwitcherProps = {
 	className?: string;
-}
+};
 
-export const LangSwitcher: FC<LangSwitcherProps & PropsWithChildren> = (props) => {
+export const LangSwitcher: FC<LangSwitcherProps & PropsWithChildren> = props => {
 	const {
-		className
-	} = props
-	const {t, i18n} = useTranslation()
+		className,
+	} = props;
+	const {t, i18n} = useTranslation();
 
 	const toggleLanguage = () => {
-		i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
-	}
+		i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru').then(
+			() => undefined,
+			() => undefined,
+		);
+	};
 
 	return (
 		<div
@@ -27,5 +30,5 @@ export const LangSwitcher: FC<LangSwitcherProps & PropsWithChildren> = (props) =
 				{t('Язык')}
 			</Button>
 		</div>
-	)
+	);
 };

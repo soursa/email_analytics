@@ -1,17 +1,17 @@
-import {FC} from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './Sidebar.module.scss'
-import {ThemeSwitcher} from "widgets/ThemeSwitcher";
-import {LangSwitcher} from "widgets/LangSwitcher";
+import {type FC} from 'react';
+import {classNames} from 'shared/lib/classNames/classNames';
+import cls from './Sidebar.module.scss';
+import {ThemeSwitcher} from 'widgets/ThemeSwitcher';
+import {LangSwitcher} from 'widgets/LangSwitcher';
 
-interface SidebarProps {
+type SidebarProps = {
 	className?: string;
-}
+};
 
-export const Sidebar: FC<SidebarProps> = (props) => {
+export const Sidebar: FC<SidebarProps> = props => {
 	const {
 		className,
-	} = props
+	} = props;
 
 	return (
 		<div
@@ -22,5 +22,5 @@ export const Sidebar: FC<SidebarProps> = (props) => {
 				<LangSwitcher className={cls.langSwitcher}/>
 			</div>
 		</div>
-	)
+	);
 };
