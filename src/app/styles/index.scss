@@ -9,8 +9,16 @@ a {
 
 .app {
   font: var(--font-m);
-
   background: var(--bg-color);
-
   min-height: 100vh;
+}
+
+.content-page {
+  display: flex;
+  height: 100%;
+}
+
+.page-wrapper {
+  flex-grow: 1;
+  padding: 20px;
 }

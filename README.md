@@ -12,3 +12,13 @@ Build development
 ```
 npm run build:dev
 ```
+
+Run eslint check
+```
+npm run lint:ts
+```
+
+Run eslint fix
+```
+npm run lint:ts:fix
+```
