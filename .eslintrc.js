@@ -30,6 +30,8 @@ module.exports = {
 			rules: {
 				'@typescript-eslint/prefer-nullish-coalescing': 'off',
 				'@typescript-eslint/naming-convention': 'off',
+				'@typescript-eslint/indent': 'off',
+				indent: ['error', 2],
 			},
 		},
 	],

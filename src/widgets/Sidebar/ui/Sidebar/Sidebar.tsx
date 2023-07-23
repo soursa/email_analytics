@@ -9,18 +9,18 @@ type SidebarProps = {
 };
 
 export const Sidebar: FC<SidebarProps> = props => {
-	const {
-		className,
-	} = props;
+  const {
+    className,
+  } = props;
 
-	return (
-		<div
-			className={classNames(cls.Sidebar, {}, [className])}
-		>
-			<div className={cls.switchers}>
-				<ThemeSwitcher />
-				<LangSwitcher className={cls.langSwitcher}/>
-			</div>
-		</div>
-	);
+  return (
+    <div
+      className={classNames(cls.Sidebar, {}, [className])}
+    >
+      <div className={cls.switchers}>
+        <ThemeSwitcher />
+        <LangSwitcher className={cls.langSwitcher}/>
+      </div>
+    </div>
+  );
 };

@@ -12,20 +12,20 @@ type ButtonProps = {
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<ButtonProps & PropsWithChildren> = props => {
-	const {
-		theme = ButtonTheme.CLEAR,
-		className,
-		children,
-		...otherProps
-	} = props;
+  const {
+    theme = ButtonTheme.CLEAR,
+    className,
+    children,
+    ...otherProps
+  } = props;
 
-	return (
-		<button
-			type='button'
-			className={classNames(cls.Button, {}, [className, cls[theme]])}
-			{...otherProps}
-		>
-			{children}
-		</button>
-	);
+  return (
+    <button
+      type='button'
+      className={classNames(cls.Button, {}, [className, cls[theme]])}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
 };

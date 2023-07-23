@@ -1,6 +1,5 @@
 {
-  "Тестовый текст": "Example text",
-  "Язык": "Русский",
-  "Основная страница": "Main page",
-  "О сайте": "About page"
+  "Main page": "Main page",
+  "About page": "About page",
+  "Language": "Русский"
 }

@@ -8,27 +8,27 @@ type LangSwitcherProps = {
 };
 
 export const LangSwitcher: FC<LangSwitcherProps & PropsWithChildren> = props => {
-	const {
-		className,
-	} = props;
-	const {t, i18n} = useTranslation();
+  const {
+    className,
+  } = props;
+  const {t, i18n} = useTranslation();
 
-	const toggleLanguage = () => {
-		i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru').then(
-			() => undefined,
-			() => undefined,
-		);
-	};
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru').then(
+      () => undefined,
+      () => undefined,
+    );
+  };
 
-	return (
-		<div
-			className={classNames('', {}, [className])}
-		>
-			<Button
-				onClick={toggleLanguage}
-			>
-				{t('Язык')}
-			</Button>
-		</div>
-	);
+  return (
+    <div
+      className={classNames('', {}, [className])}
+    >
+      <Button
+        onClick={toggleLanguage}
+      >
+        {t('Language')}
+      </Button>
+    </div>
+  );
 };
