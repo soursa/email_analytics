@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		jest: true,
 	},
 	extends: [
 		'xo',
@@ -31,6 +32,7 @@ module.exports = {
 				'@typescript-eslint/prefer-nullish-coalescing': 'off',
 				'@typescript-eslint/naming-convention': 'off',
 				'@typescript-eslint/indent': 'off',
+				'@typescript-eslint/no-unsafe-call': 'off',
 				indent: ['error', 2],
 			},
 		},
