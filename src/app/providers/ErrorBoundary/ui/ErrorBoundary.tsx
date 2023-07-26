@@ -1,6 +1,7 @@
 import React, {type ErrorInfo, type ReactNode, Suspense} from 'react';
 import {PageError} from 'widgets/PageError';
 import {Loader} from 'shared/ui/Loader/Loader';
+import * as Sentry from '@sentry/react';
 
 type ErrorBoundaryProps = {
   children: ReactNode;
@@ -21,7 +22,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.log(error, info.componentStack);
+    Sentry.captureException({error, info});
   }
 
   render() {
