@@ -1,24 +1,34 @@
-Start with dev server
+### Start with dev server
 ```
 npm start
 ```
 
-Build production
+### Build production
 ```
 npm run build:prod
 ```
 
-Build development
+### Build development
 ```
 npm run build:dev
 ```
 
-Run eslint check
+### Run eslint check
 ```
 npm run lint:ts
 ```
 
-Run eslint fix
+### Run eslint fix
 ```
 npm run lint:ts:fix
+```
+
+### Run stylelint check
+```
+npm run lint:scss
+```
+
+### Run stylelint fix
+```
+npm run lint:scss:fix
 ```

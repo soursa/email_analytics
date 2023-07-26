@@ -41,6 +41,7 @@ module.exports = {
 	},
 	plugins: [
 		'react',
+		'i18next',
 	],
 	settings: {
 		react: {
@@ -49,5 +50,6 @@ module.exports = {
 	},
 	rules: {
 		'react/react-in-jsx-scope': 'off',
+		'i18next/no-literal-string': 2,
 	},
 };
