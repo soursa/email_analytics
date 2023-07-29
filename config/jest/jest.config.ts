@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
+import type { Config } from 'jest';
 
 const config: Config = {
   // The root directory that Jest should scan for tests and modules within
@@ -25,15 +25,10 @@ const config: Config = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-  ],
+  coveragePathIgnorePatterns: ['/node_modules/'],
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: [
-    '<rootDir>src',
-    'node_modules',
-  ],
+  moduleDirectories: ['<rootDir>src', 'node_modules'],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
@@ -48,25 +43,16 @@ const config: Config = {
   ],
 
   // A list of paths to directories that Jest should use to search for files in
-  roots: [
-    '<rootDir>/src',
-  ],
+  roots: ['<rootDir>/src'],
 
   // The glob patterns Jest uses to detect test files
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-  ],
+  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: [
-    '/node_modules/',
-  ],
+  testPathIgnorePatterns: ['/node_modules/'],
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: [
-    '/node_modules/',
-    '\\.pnp\\.[^\\/]+$',
-  ],
+  transformIgnorePatterns: ['/node_modules/', '\\.pnp\\.[^\\/]+$'],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {

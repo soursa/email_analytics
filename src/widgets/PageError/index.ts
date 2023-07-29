@@ -1,1 +1,1 @@
-export {PageErrorAsync as PageError} from './ui/PageError.async';
+export { PageErrorAsync as PageError } from './ui/PageError.async';

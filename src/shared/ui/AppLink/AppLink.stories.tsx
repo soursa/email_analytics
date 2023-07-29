@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ThemeDecorator} from 'shared/config/storybook/ThemeDecorator/ThemeDecorator.';
-import {Theme} from 'app/providers/ThemeProvider';
-import {AppLink, AppLinkTheme} from './AppLink';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator.';
+import { Theme } from 'app/providers/ThemeProvider';
+import { AppLink, AppLinkTheme } from './AppLink';
 
 const meta = {
   title: 'shared/AppLink',
@@ -50,9 +50,7 @@ export const PrimaryDark: Story = {
     to: '/',
     children: 'Link',
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const PrimaryInvertedDark: Story = {
@@ -61,9 +59,7 @@ export const PrimaryInvertedDark: Story = {
     children: 'Link',
     theme: AppLinkTheme.PRIMARY_INVERTED,
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const SecondaryDark: Story = {
@@ -72,9 +68,7 @@ export const SecondaryDark: Story = {
     children: 'Link',
     theme: AppLinkTheme.SECONDARY,
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const SecondaryInvertedDark: Story = {
@@ -83,7 +77,5 @@ export const SecondaryInvertedDark: Story = {
     children: 'Link',
     theme: AppLinkTheme.SECONDARY_INVERTED,
   },
-  decorators: [
-    ThemeDecorator(Theme.DARK),
-  ],
+  decorators: [ThemeDecorator(Theme.DARK)],
 };
