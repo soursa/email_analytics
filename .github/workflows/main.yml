@@ -1,6 +1,10 @@
 name: CI Testing
 run-name: ${{ github.actor }} test
-on: [ push ]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
   testing:
     runs-on: ubuntu-latest
