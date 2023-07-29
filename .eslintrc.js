@@ -59,5 +59,7 @@ module.exports = {
 	rules: {
 		'react/react-in-jsx-scope': 'off',
 		'i18next/no-literal-string': 2,
+		'react/display-name': 'off',
+		'new-cap': 'off',
 	},
 };
