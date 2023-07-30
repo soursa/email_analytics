@@ -14,7 +14,7 @@
     "allowJs": true,
     // Абсолютные пути
     "baseUrl": ".",
-    "paths" : {
+    "paths": {
       "*": ["./src/*"]
     },
     // Определяет то, какие импорты будут.
@@ -29,5 +29,12 @@
       // Указываем модульную систему компиляции для ts-node
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/**/*.ts",
+    "./config/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./webpack.config.ts"
+  ]
 }

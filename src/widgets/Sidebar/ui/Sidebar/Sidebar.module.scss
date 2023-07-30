@@ -2,8 +2,8 @@
   height: calc(100vh - var(--navbar-heigth));
   width: 300px;
   background: var(--inverted-bg-color);
-
   position: relative;
+  transition: width 0.2s;
 }
 
 .switchers {
@@ -17,4 +17,8 @@
 
 .langSwitcher {
   margin-left: 15px;
+}
+
+.collapsed {
+  width: 110px;
 }
